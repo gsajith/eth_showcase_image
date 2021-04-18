@@ -1,9 +1,3 @@
-# Use yarn to install packages
-`yarn install`
-
-# Put your metamask account's private key in .env
-`cp .env.example .env`
-
 # Compile smart contract into an artifact file
 
 `npx hardhat compile`
@@ -15,3 +9,4 @@
 # Deploy contract to the hardhat network
 
 `npx hardhat run scripts/deploy.js --network localhost`
+`npx hardhat run scripts/deploy.js --network ropsten`
