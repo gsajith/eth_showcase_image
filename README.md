@@ -9,4 +9,5 @@
 # Deploy contract to the hardhat network
 
 `npx hardhat run scripts/deploy.js --network localhost`
+
 `npx hardhat run scripts/deploy.js --network ropsten`
