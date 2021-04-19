@@ -1,15 +1,10 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Greeter = await hre.ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.deploy("Hello, Hardhat!");
-  await greeter.deployed();
-  console.log("Greeter deployed to:", greeter.address);
-
-  const Token = await hre.ethers.getContractFactory("Token");
-  const token = await Token.deploy();
-  await token.deployed();
-  console.log("Token deployed to:", token.address);
+  const Image = await hre.ethers.getContractFactory("Image");
+  const image = await Image.deploy("https://i.imgur.com/dVbdxIb.jpg");
+  await image.deployed();
+  console.log("Greeter deployed to:", image.address);
 }
 
 main()
