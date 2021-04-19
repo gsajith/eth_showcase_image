@@ -88,7 +88,7 @@ function App() {
         <button onClick={sendCoins}>Send Coins</button>
         <input
           onChange={(e) => setUserAccount(e.target.value)}
-          placeHolder="Account ID"
+          placeholder="Account ID"
         />
         <input
           onChange={(e) => setAmount(e.target.value)}
