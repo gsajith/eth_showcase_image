@@ -4,8 +4,8 @@ import "./App.css";
 import Greeter from "./artifacts/contracts/Greeter.sol/Greeter.json";
 import Token from "./artifacts/contracts/Token.sol/Token.json";
 
-const greeterAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3";
-const tokenAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+const greeterAddress = "0xC4A743126DCcA4DF85B8f75B6eD113bb69dD65A1";
+const tokenAddress = "0xB6B18cae509Fcf3542FF6975C2Da06CAAc9773c5";
 
 function App() {
   const [greeting, setGreetingValue] = useState("");
@@ -23,8 +23,12 @@ function App() {
       });
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const contract = new ethers.Contract(tokenAddress, Token.abi, provider);
-      const balance = await contract.balanceOf(account);
-      console.log("Balance: ", balance.toString());
+      try {
+        const balance = await contract.balanceOf(account);
+        console.log("Balance: ", balance.toString());
+      } catch (err) {
+        console.log("Error: ", err);
+      }
     }
   }
 

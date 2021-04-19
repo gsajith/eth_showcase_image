@@ -11,3 +11,5 @@
 `npx hardhat run scripts/deploy.js --network localhost`
 
 `npx hardhat run scripts/deploy.js --network ropsten`
+
+# After you deploy, set the addresses in App.js
