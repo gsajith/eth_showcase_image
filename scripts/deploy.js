@@ -4,7 +4,7 @@ async function main() {
   const Image = await hre.ethers.getContractFactory("Image");
   const image = await Image.deploy("https://i.imgur.com/dVbdxIb.jpg");
   await image.deployed();
-  console.log("Greeter deployed to:", image.address);
+  console.log("Image deployed to:", image.address);
 }
 
 main()
